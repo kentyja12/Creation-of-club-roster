@@ -20,7 +20,7 @@ def print_xlsx(app):
         default.ws['A3'] = '●団体名：' + student_data.club_name #クラブ名をセルに入れる
         savename = filedialog.asksaveasfilename(
                                                 title = "名前を付けて保存",
-                                                initialfile = "学内活動参加者名簿_{}_{}".format(student_data.club_name,default.yyyymmdd),
+                                                initialfile = "集会参加者名簿_{}_{}".format(student_data.club_name,default.yyyymmdd),
                                                 initialdir = "./", #自身のディレクトリを指定
                                                 defaultextension= "xlsx",
                                                 filetypes = [("エクセル形式",".xlsx"),]
