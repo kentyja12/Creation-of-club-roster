@@ -12,6 +12,7 @@
 * 出席者表を特定のフォーマットで出力(.xlsx)
 
 ### 開発期間
+
 3か月(実稼働1.5か月)
 
 ### version
@@ -24,8 +25,8 @@
 
 #### 方法 (pythonで実行)
 
-1. `python install -r requirements.txt`\
-2. `python -m meibo`\
+1. `pip install -r requirements.txt --user`
+2. `python -m meibo`
 
 ### 使い方
 
@@ -41,9 +42,9 @@
 
 1. インスタント名簿登録欄の「学籍番号」,「名前」,「電話番号」の入力ボックスにそれぞれ入力。
    入力形式
-    * 学籍番号：12XX123
-    * 名前　　：姓　名
-    * 電話番号：123-4567-8901
+   * 学籍番号：12XX123
+   * 名前　　：姓　名
+   * 電話番号：123-4567-8901
 2. 「インスタント名簿登録」のボタンを押す。
 3. 「団体名」の入力ボックスに団体名(クラブ名)を入力。
 4. 「名簿出力」ボタンが有効になるので、ボタンを押して出力。
@@ -51,25 +52,30 @@
 ### サンプル
 
 #### トップ画面
+
 * 名簿を読み込み後、学籍番号を入力、またはインスタント名簿を入力
 
 ![default_window](images/default_window.png)
 
 #### 入力時の画面
+
 ![entered_window](images/entered_window.png)
 
 #### 登録リストの画面
+
 * 名簿から登録した出席者と、インスタントで登録した出席者の和として表示
 
 ![registrants_list_window](images/registrants_list_window.png)
 
 #### 読み込む名簿の例
+
 * 読み込む名簿はエクセル形式
 * 列ごとのジャンルの順番は固定
 
 ![example_list](images/example_list.png)
 
 #### 出力画面の例
+
 * 出力形式はxlsx形式のみ
 
 ![example_output_sheet](images/example_output_sheet.png)
