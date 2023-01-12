@@ -11,6 +11,9 @@
 * 名簿にない人を出席者に追加(インスタント名簿登録)
 * 出席者表を特定のフォーマットで出力(.xlsx)
 
+### 開発期間
+3か月(実稼働1.5か月)
+
 ### version
 
 * python 3.6.8
@@ -19,7 +22,7 @@
 
 ### 実行方法
 
-#### 方法1 (pythonで実行)
+#### 方法 (pythonで実行)
 
 1. `python install -r requirements.txt`\
 2. `python -m meibo`\
