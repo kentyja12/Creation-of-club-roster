@@ -1,81 +1,86 @@
-# 出席名簿作成アプリ
+<span style="font-family: 'Times New Roman', Times, serif;">
 
-出席者を確認、雛形に落とし込むためのツール
-団体活動に使うため作成
+# Creation of club roster App
 
-### 機能
+**This application is designed for people who can understand Japanese.   
+If you need the English version, please fork it.**
 
-* 名簿の読み込み
-* 学籍番号から名簿との照合
-* 出席者リストの表示
-* 名簿にない人を出席者に追加(インスタント名簿登録)
-* 出席者表を特定のフォーマットで出力(.xlsx)
+A tool for confirming attendees and integrating them into a template
+Created for use in group activities.
 
-### 開発期間
+### Features
 
-3か月(実稼働1.5か月)
+* Loading of roster
+* Verification of roster with student ID numbers
+* Display of attendee list
+* Addition of individuals not in the roster to the attendee list (Instant roster registration)
+* Output of attendance list in a specific format (.xlsx)
 
-### version
+### Development Period
+
+3 months (1.5 months of actual operation)
+
+### Version
 
 * python 3.6.8
 * openpyxl 3.0.10
 * pandas 1.1.5
 
-### 実行方法
+### Execution Method
 
-#### 方法 (pythonで実行)
+#### Method (Run with python)
 
 1. `pip install -r requirements.txt --user`
 2. `python -m meibo`
 
-### 使い方
+### How to Use
 
-#### 読み込んだ名簿を用いて出席登録
+#### Register attendance using the loaded roster
 
-1. 「名簿読み込み」のボタンから、名簿を読み込む。(テスト起動時は、「example_meibo.xlsx」を読み込む。)
-2. 「学籍番号：」の入力ボックスに学籍番号を入力。(大文字、小文字どちらも対応)
-3. 「出席登録」のボタンを押す。
-4. 「団体名：」の入力ボックスに団体名(クラブ名)を入力。
-5. 「名簿出力」ボタンが有効になるので、ボタンを押して出力。
+1. Load the roster from the "名簿読み込み" button. (When testing, load "example_meibo.xlsx".)
+2. Enter the student ID number in the "学籍番号：" input box. (Supports both uppercase and lowercase)
+3. Press the "出席登録" button.
+4. Enter the group name (club name) in the "団体名：" input box.
+5. When the "名簿出力" button becomes active, press the button to output.
 
-#### 読み込んだ名簿外の人物を出席者に登録
+#### Register individuals not in the loaded roster as attendees
 
-1. インスタント名簿登録欄の「学籍番号」,「名前」,「電話番号」の入力ボックスにそれぞれ入力。
-   入力形式
-   * 学籍番号：12XX123
-   * 名前　　：姓　名
-   * 電話番号：123-4567-8901
-2. 「インスタント名簿登録」のボタンを押す。
-3. 「団体名」の入力ボックスに団体名(クラブ名)を入力。
-4. 「名簿出力」ボタンが有効になるので、ボタンを押して出力。
+1. Enter the "学籍番号", "名前", and "電話番号" in the input boxes of the Instant Roster Registration section.
+   Input format
+   * 学籍番号： 12XX123
+   * 名前： Last First
+   * 電話番号： 123-4567-8901
+2. Press the "インスタント名簿登録" button.
+3. Enter the group name (club name) in the "団体名" input box.
+4. When the "名簿出力" button becomes active, press the button to output.
 
-### サンプル
+### Sample
 
-#### トップ画面
+#### Top Screen
 
-* 名簿を読み込み後、学籍番号を入力、またはインスタント名簿を入力
+* After loading the roster, enter the student ID number or input the instant roster
 
 ![default_window](images/default_window.png)
 
-#### 入力時の画面
+#### Screen During Input
 
 ![entered_window](images/entered_window.png)
 
-#### 登録リストの画面
+#### Registration List Screen
 
-* 名簿から登録した出席者と、インスタントで登録した出席者の和として表示
+* Displayed as the sum of attendees registered from the roster and attendees registered instantly
 
 ![registrants_list_window](images/registrants_list_window.png)
 
-#### 読み込む名簿の例
+#### Example of Roster to Load
 
-* 読み込む名簿はエクセル形式
-* 列ごとのジャンルの順番は固定
+* The roster to load is in Excel format
+* The order of genres for each column is fixed
 
 ![example_list](images/example_list.png)
 
-#### 出力画面の例
+#### Example of Output Screen
 
-* 出力形式はxlsx形式のみ
+* The output format is only in xlsx format
 
 ![example_output_sheet](images/example_output_sheet.png)
