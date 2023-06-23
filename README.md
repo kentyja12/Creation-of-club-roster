@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 <span style="font-family: 'Times New Roman', Times, serif;">
 
 # Creation of club roster App
 
 **This application is designed for people who can understand Japanese.   
 If you need the English version, please fork it.**
+=======
+# 出席名簿作成アプリ
+>>>>>>> effa1c51d42008fa86858845d3f88c9727f47ca3
 
 A tool for confirming attendees and integrating them into a template
 Created for use in group activities.
