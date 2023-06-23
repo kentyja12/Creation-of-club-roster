@@ -1,6 +1,10 @@
 <span style="font-family: 'Times New Roman', Times, serif;">
 
+<<<<<<< HEAD
 # Creation of club roster App
+=======
+# Attendance Roster Creation App
+>>>>>>> origin/master
 
 **This application is designed for people who can understand Japanese.   
 If you need the English version, please fork it.**
