@@ -23,8 +23,14 @@ class Application(tkinter.Frame):
     def at_least_char(self,string): #文字列が入らない限りボタンを押せないようにする。
         if len(string)<=0:
             self.Button_print_xlsx['state'] = 'disabled'
+            self.Button['state'] = 'disabled'
+            self.Button2['state'] = 'disabled'
+            self.Button4['state'] = 'disabled'            
         else:
             self.Button_print_xlsx['state'] = 'normal'
+            self.Button['state'] = 'normal'
+            self.Button2['state'] = 'normal'
+            self.Button4['state'] = 'normal'            
         return True
 
     def __init__(self,master=None):
@@ -62,7 +68,7 @@ class Application(tkinter.Frame):
         self.EditBox.place(x=120,y=10)
 
         #Button：学籍番号登録ボタン
-        self.Button = tkinter.Button(text=u'出席登録')
+        self.Button = tkinter.Button(text=u'出席登録', state="disabled")
         self.Button.bind("<Button-1>",self.get_from_EditBox_to_class)
         self.Button.place(x=250,y=10)
 
@@ -80,9 +86,9 @@ class Application(tkinter.Frame):
         Button0.place(x=20,y=130)
 
         #Button：登録リスト
-        Button2 = tkinter.Button(text=u'登録リスト')
-        Button2.bind("<Button-1>",register_list)
-        Button2.place(x=20,y=100)
+        self.Button4 = tkinter.Button(text=u'登録リスト', state="disabled")
+        self.Button4.bind("<Button-1>",register_list)
+        self.Button4.place(x=20,y=100)
 
         #Button：リストクリア
         self.Button3 = tkinter.Button(text=u'リストクリア',
@@ -112,7 +118,7 @@ class Application(tkinter.Frame):
         self.EditBox_instant3.place(x=250,y=200)
 
         #Button：インスタント名簿登録
-        self.Button2 = tkinter.Button(text=u'インスタント名簿登録')
+        self.Button2 = tkinter.Button(text=u'インスタント名簿登録', state='disabled')
         self.Button2.bind("<Button-1>",self.get_from_EditBox_to_class_instant)
         self.Button2.place(x=250,y=230)
 

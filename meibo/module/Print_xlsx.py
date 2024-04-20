@@ -4,6 +4,7 @@ from tkinter import filedialog
 
 from .sub_module.Make_df_from_list import make_df_from_list
 from .Write_xlsx import write_xlsx
+from .Meibo_clear import meibo_clear
 
 from Class import default
 from Class import student_data
@@ -27,4 +28,11 @@ def print_xlsx(app):
         ) #ダイアログを表示し、保存するファイルの絶対パスを取得
         if savename != '':
             default.wb.save(savename) # xlsxを出力
+            # ボタンを初期状態に戻す
+            app.Button_print_xlsx['state'] = 'disabled'
+            app.Button['state'] = 'disabled'
+            app.Button2['state'] = 'disabled'
+            app.Button4['state'] = 'disabled'  
+            # 名簿をクリアする
+            meibo_clear(app)
     return "break" #ボタンが押された状態を回避する
