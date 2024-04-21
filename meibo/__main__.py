@@ -6,13 +6,13 @@ from openpyxl import load_workbook
 import tkinter
 from tkinter import messagebox
 
-from .module.Gakuban_append_flow import gakuban_append_flow
-from .module.Write_xlsx import write_xlsx
-from .module.File_load import file_load
-from .module.Register_list import register_list
-from .module.Print_xlsx import print_xlsx
-from .module.Instant_meibo_register import instant_meibo_register
-from .module.Meibo_clear import meibo_clear
+from module.Gakuban_append_flow import gakuban_append_flow
+from module.Write_xlsx import write_xlsx
+from module.File_load import file_load
+from module.Register_list import register_list
+from module.Print_xlsx import print_xlsx
+from module.Instant_meibo_register import instant_meibo_register
+from module.Meibo_clear import meibo_clear
 
 from Class import tmp
 from Class import student_data
@@ -29,7 +29,7 @@ class Application(tkinter.Frame):
         else:
             self.Button_print_xlsx['state'] = 'normal'
             self.Button['state'] = 'normal'
-            self.Button2['state'] = 'normal'
+            self.Button2['state'] = 'normal' 
             self.Button4['state'] = 'normal'            
         return True
 
